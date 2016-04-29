@@ -1,0 +1,6 @@
+[submodule "vendor/ap-image-zoom"]
+	path = vendor/ap-image-zoom
+	url = git@github.com:armin-pfaeffle/ap-image-zoom.git
+[submodule "vendor/screenfull.js"]
+	path = vendor/screenfull.js
+	url = git@github.com:sindresorhus/screenfull.js.git

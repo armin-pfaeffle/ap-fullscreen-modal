@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="author" content="Armin Pfäffle" />
+		<meta name="robots" content="index, follow" />
+
+		<title>ap-image-fullscreen</title>
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="lib/css/ap-fullscreen-modal.css" type="text/css" media="screen" />
+
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		 <script src="lib/js/ap-fullscreen-modal.js"></script>
+		<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	</head>
+
+	<body>
+		<div class="controls-container">
+			<header>
+				ap-fullscreen-modal
+			</header>
+			<div class="options">
+				<input type="button" value="Open" id="open" />
+			</div>
+			<footer>
+				<a href="http://www.armin-pfaeffle.de">armin-pfaeffle.de</a>
+				<a href="https://github.com/armin-pfaeffle/ap-fullscreen-modal">github.com</a>
+			</footer>
+		</div>
+
+		<div style="display: none;">
+
+			<div id="modal-content">
+				<div class="wrapper">
+					<div class="form">
+						<div class="row">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="row">
+							<label for="subject">Subject</label>
+							<input type="text" name="subject" id="subject" />
+						</div>
+						<div class="row">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="5"></textarea>
+						</div>
+						<div class="row buttons">
+							<a href="#close-modal" class="close-modal">Cancel</a>
+							<input type="submit" value="send" id="send" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#modal-content').apFullscreenModal({
+					backgroundColor: '#fafafa',
+					openSelector: '#open',
+					closeSelector: '.close-modal, #send'
+				});
+			});
+		</script>
+	</body>
+</html>
