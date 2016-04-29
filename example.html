@@ -23,7 +23,8 @@
 				ap-fullscreen-modal
 			</header>
 			<div class="options">
-				<input type="button" value="Open" id="open" />
+				<input type="button" value="Modal 1" id="open-modal-1" />
+				<input type="button" value="Modal 2" id="open-modal-2" />
 			</div>
 			<footer>
 				<a href="http://www.armin-pfaeffle.de">armin-pfaeffle.de</a>
@@ -33,8 +34,33 @@
 
 		<div style="display: none;">
 
-			<div id="modal-content">
+			<div id="modal-content-1" class="modal-content">
 				<div class="wrapper">
+					<h2>Modal Form 1</h2>
+					<div class="form">
+						<div class="row">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="row">
+							<label for="subject">Subject</label>
+							<input type="text" name="subject" id="subject" />
+						</div>
+						<div class="row">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="5"></textarea>
+						</div>
+						<div class="row buttons">
+							<a href="#close-modal" class="close-modal">Cancel</a>
+							<input type="submit" value="send" id="send" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="modal-content-2" class="modal-content">
+				<div class="wrapper">
+					<h2>Modal Form 2</h2>
 					<div class="form">
 						<div class="row">
 							<label for="name">Name</label>
@@ -61,10 +87,16 @@
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#modal-content').apFullscreenModal({
-					backgroundColor: '#fafafa',
-					openSelector: '#open',
+				$('#modal-content-1').apFullscreenModal({
+					openSelector: '#open-modal-1',
 					closeSelector: '.close-modal, #send'
+				});
+
+				$('#modal-content-2').apFullscreenModal({
+					backgroundColor: '#fafafa',
+					openSelector: '#open-modal-2',
+					closeSelector: '.close-modal, #send',
+					animationDuration: 1000
 				});
 			});
 		</script>

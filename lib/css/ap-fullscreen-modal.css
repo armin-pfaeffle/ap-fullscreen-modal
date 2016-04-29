@@ -19,12 +19,6 @@ html.apfm-open > body {
 	-ms-transform: scale(0.8);
 	-o-transform: scale(0.8);
 	transform: scale(0.8);
-
-	-webkit-transition: -webkit-transform .2s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
-	-ms-transition: -ms-transform 0.2s, opacity 0.2s;
-	-o-transition: -o-transform 0.2s, opacity 0.2s;
-	transition: transform 0.2s, opacity 0.2s;
 }
 
 .apfm-open .apfm-container {
