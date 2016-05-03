@@ -1,4 +1,4 @@
-Copyright (c) 2015 Armin Pfäffle, http://www.armin-pfaeffle.de/
+Copyright (c) 2016 Armin Pfäffle, http://www.armin-pfaeffle.de/
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
