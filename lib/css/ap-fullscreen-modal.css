@@ -4,26 +4,40 @@ html.apfm-open > body {
 	height: 100%;
 }
 
+html.apfm-open > body {
+	overflow: hidden;
+}
+
 .apfm-container {
 	position: fixed;
 	visibility: hidden;
 	opacity: 0;
 	z-index: -1;
-	left: 0;
 	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
 
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	-ms-transform: scale(0.8);
 	-o-transform: scale(0.8);
 	transform: scale(0.8);
+
 }
 
 .apfm-open .apfm-container {
 	visibility: visible;
 	z-index: 99999;
+
+	/* for iOS momentum/inertia scrolling */
+	/* Must be put here and not in original .apfm-container class because
+	   else scrolling on main page is buggy */
+	-webkit-overflow-scrolling: touch;
 }
 
 .apfm-container.apfm-open {
@@ -47,12 +61,7 @@ html.apfm-open > body {
 
 	.apfm-container .apfm-wrapper {
 		position: relative;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
 	}
-
-
 
 	.apfm-container .apfm-close-button {
 		position: absolute;
@@ -64,9 +73,9 @@ html.apfm-open > body {
 		cursor: pointer;
 
 		/* No blue selection when clicking on the cross */
-	    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	    -webkit-tap-highlight-color: transparent;
-	    -webkit-touch-callout: none;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
