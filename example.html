@@ -39,20 +39,20 @@
 					<h2>Modal Form 1</h2>
 					<div class="form">
 						<div class="row">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<label for="name-1">Name</label>
+							<input type="text" name="name-1" id="name-1" />
 						</div>
 						<div class="row">
-							<label for="subject">Subject</label>
-							<input type="text" name="subject" id="subject" />
+							<label for="subject-1">Subject</label>
+							<input type="text" name="subject-1" id="subject-1" />
 						</div>
 						<div class="row">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="5"></textarea>
+							<label for="message-1">Message</label>
+							<textarea name="message-1" id="message-1" rows="5"></textarea>
 						</div>
 						<div class="row buttons">
 							<a href="#close-modal" class="close-modal">Cancel</a>
-							<input type="submit" value="send" id="send" />
+							<input type="submit" value="Send" id="send-1" />
 						</div>
 					</div>
 				</div>
@@ -63,20 +63,20 @@
 					<h2>Modal Form 2</h2>
 					<div class="form">
 						<div class="row">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<label for="name-2">Name</label>
+							<input type="text" name="name-2" id="name-2" />
 						</div>
 						<div class="row">
-							<label for="subject">Subject</label>
-							<input type="text" name="subject" id="subject" />
+							<label for="subject-2">Subject</label>
+							<input type="text" name="subject-2" id="subject-2" />
 						</div>
 						<div class="row">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="5"></textarea>
+							<label for="message-2">Message</label>
+							<textarea name="message-2" id="message-2" rows="5"></textarea>
 						</div>
 						<div class="row buttons">
 							<a href="#close-modal" class="close-modal">Cancel</a>
-							<input type="submit" value="send" id="send" />
+							<input type="submit" value="Send" id="send-2" />
 						</div>
 					</div>
 				</div>
@@ -89,13 +89,13 @@
 			$(document).ready(function() {
 				$('#modal-content-1').apFullscreenModal({
 					openSelector: '#open-modal-1',
-					closeSelector: '.close-modal, #send'
+					closeSelector: '.close-modal, #send-1'
 				});
 
 				$('#modal-content-2').apFullscreenModal({
 					backgroundColor: '#fafafa',
 					openSelector: '#open-modal-2',
-					closeSelector: '.close-modal, #send',
+					closeSelector: '.close-modal, #send-2',
 					animationDuration: 1000
 				});
 			});

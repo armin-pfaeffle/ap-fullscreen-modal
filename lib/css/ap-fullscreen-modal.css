@@ -10,9 +10,9 @@ html.apfm-open > body {
 
 .apfm-container {
 	position: fixed;
+	z-index: -1;
 	visibility: hidden;
 	opacity: 0;
-	z-index: -1;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -30,17 +30,23 @@ html.apfm-open > body {
 
 }
 
-.apfm-open .apfm-container {
+.apfm-container.apfm-opening,
+.apfm-container.apfm-closing {
+	visibility: visible;
+	z-index: 99999;
+
+}
+
+.apfm-container.apfm-open {
 	visibility: visible;
 	z-index: 99999;
 
 	/* for iOS momentum/inertia scrolling */
 	/* Must be put here and not in original .apfm-container class because
-	   else scrolling on main page is buggy */
+	else scrolling on main page is buggy */
 	-webkit-overflow-scrolling: touch;
-}
 
-.apfm-container.apfm-open {
+	/* These attributes are animated: */
 	opacity: 1;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
