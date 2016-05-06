@@ -43,7 +43,7 @@ html.apfm-open > body {
 
 	/* for iOS momentum/inertia scrolling */
 	/* Must be put here and not in original .apfm-container class because
-	else scrolling on main page is buggy */
+	   else scrolling on main page is buggy */
 	-webkit-overflow-scrolling: touch;
 
 	/* These attributes are animated: */
@@ -55,72 +55,62 @@ html.apfm-open > body {
 	transform: scale(1);
 }
 
-.apfm-container,
-.apfm-container * {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	     -o-user-select: none;
-	        user-select: none;
+.apfm-container .apfm-wrapper {
+	position: relative;
 }
 
-	.apfm-container .apfm-wrapper {
-		position: relative;
-	}
+.apfm-container .apfm-close-button {
+	position: absolute;
+	z-index: 1000;
+	top: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
 
-	.apfm-container .apfm-close-button {
-		position: absolute;
-		z-index: 1000;
-		top: 20px;
-		right: 20px;
-		width: 50px;
-		height: 50px;
-		cursor: pointer;
-
-		/* No blue selection when clicking on the cross */
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		-webkit-tap-highlight-color: transparent;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
+	/* No blue selection when clicking on the cross */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
 
-	.apfm-container .apfm-close-button::before,
-	.apfm-container .apfm-close-button::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 50%;
-		width: 100%;
-		height: 2px;
-		background-color: #bbb;
+.apfm-container .apfm-close-button::before,
+.apfm-container .apfm-close-button::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 2px;
+	background-color: #bbb;
 
-		-webkit-transform: rotate(45deg);
-		-moz-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
 
-		-webkit-transition: background-color .2s;
-		-moz-transition: background-color .2s;
-		-ms-transition: background-color .2s;
-		-o-transition: background-color .2s;
-		transition: background-color .2s;
-	}
+	-webkit-transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-ms-transition: background-color .2s;
+	-o-transition: background-color .2s;
+	transition: background-color .2s;
+}
 
-	.apfm-container .apfm-close-button::after {
-		-webkit-transform: rotate(-45deg);
-		-moz-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		-o-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-	}
+.apfm-container .apfm-close-button::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
 
-	.apfm-container .apfm-close-button:hover::before,
-	.apfm-container .apfm-close-button:hover::after {
-		background-color: #555;
-	}
+.apfm-container .apfm-close-button:hover::before,
+.apfm-container .apfm-close-button:hover::after {
+	background-color: #555;
+}
